@@ -117,3 +117,103 @@ The offending line appears to be:
 2024-11-17 21:25:28,767 p=12798 u=victoria n=ansible | PLAY RECAP ************************************************************************************************************
 2024-11-17 21:25:28,767 p=12798 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
 2024-11-17 21:25:28,767 p=12798 u=victoria n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:45:26,714 p=15083 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-17 22:45:26,878 p=15083 u=victoria n=ansible | PLAY [all] ********************************************************************************************
+2024-11-17 22:45:26,891 p=15083 u=victoria n=ansible | TASK [Gathering Facts] ********************************************************************************
+2024-11-17 22:45:27,013 p=15083 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 22:45:28,006 p=15083 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:45:28,022 p=15083 u=victoria n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2024-11-17 22:45:28,057 p=15083 u=victoria n=ansible | TASK [2do_parcial : debug] ****************************************************************************
+2024-11-17 22:45:28,072 p=15083 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 22:45:28,084 p=15083 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:45:28,432 p=15083 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:45:28,441 p=15083 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:45:28,644 p=15083 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:45:28,653 p=15083 u=victoria n=ansible | TASK [2do_parcial : Crear archivo con templae] ********************************************************
+2024-11-17 22:45:29,473 p=15083 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:45:29,481 p=15083 u=victoria n=ansible | TASK [2do_parcial : Copiar archivo a una carpeta específica usando template] **************************
+2024-11-17 22:45:30,047 p=15083 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:45:30,060 p=15083 u=victoria n=ansible | TASK [2do_parcial : modificar archivo de sudoers para el grupo 2PSupervisores] ************************
+2024-11-17 22:45:30,278 p=15083 u=victoria n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2PSupervisores): Permission denied"}
+2024-11-17 22:45:30,280 p=15083 u=victoria n=ansible | PLAY RECAP ********************************************************************************************
+2024-11-17 22:45:30,281 p=15083 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:45:30,281 p=15083 u=victoria n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:57:19,384 p=15362 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-17 22:57:19,631 p=15362 u=victoria n=ansible | PLAY [all] ********************************************************************************************
+2024-11-17 22:57:19,648 p=15362 u=victoria n=ansible | TASK [Gathering Facts] ********************************************************************************
+2024-11-17 22:57:19,767 p=15362 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 22:57:21,086 p=15362 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:57:21,114 p=15362 u=victoria n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2024-11-17 22:57:21,178 p=15362 u=victoria n=ansible | TASK [2do_parcial : debug] ****************************************************************************
+2024-11-17 22:57:21,198 p=15362 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 22:57:21,212 p=15362 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:57:21,628 p=15362 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:57:21,647 p=15362 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:57:21,884 p=15362 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:57:21,894 p=15362 u=victoria n=ansible | TASK [2do_parcial : Crear archivo con templae] ********************************************************
+2024-11-17 22:57:22,972 p=15362 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:57:22,988 p=15362 u=victoria n=ansible | TASK [2do_parcial : Copiar archivo a una carpeta específica usando template] **************************
+2024-11-17 22:57:23,694 p=15362 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:57:23,706 p=15362 u=victoria n=ansible | TASK [2do_parcial : modificar archivo de sudoers para el grupo 2PSupervisores] ************************
+2024-11-17 22:57:23,954 p=15362 u=victoria n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2PSupervisores): Permission denied"}
+2024-11-17 22:57:23,956 p=15362 u=victoria n=ansible | PLAY RECAP ********************************************************************************************
+2024-11-17 22:57:23,957 p=15362 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:57:23,957 p=15362 u=victoria n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:58:25,920 p=15672 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-17 22:58:26,080 p=15672 u=victoria n=ansible | PLAY [all] ********************************************************************************************
+2024-11-17 22:58:26,094 p=15672 u=victoria n=ansible | TASK [Gathering Facts] ********************************************************************************
+2024-11-17 22:58:26,207 p=15672 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 22:58:27,217 p=15672 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:58:27,233 p=15672 u=victoria n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2024-11-17 22:58:27,275 p=15672 u=victoria n=ansible | TASK [2do_parcial : debug] ****************************************************************************
+2024-11-17 22:58:27,292 p=15672 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 22:58:27,302 p=15672 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:58:27,646 p=15672 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:58:27,658 p=15672 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:58:27,895 p=15672 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:58:27,904 p=15672 u=victoria n=ansible | TASK [2do_parcial : Crear archivo con templae] ********************************************************
+2024-11-17 22:58:28,788 p=15672 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:58:28,798 p=15672 u=victoria n=ansible | TASK [2do_parcial : Copiar archivo a una carpeta específica usando template] **************************
+2024-11-17 22:58:29,438 p=15672 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:58:29,447 p=15672 u=victoria n=ansible | TASK [2do_parcial : modificar archivo de sudoers para el grupo 2PSupervisores] ************************
+2024-11-17 22:58:29,652 p=15672 u=victoria n=ansible | fatal: [localhost]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/2PSupervisores): Permission denied"}
+2024-11-17 22:58:29,654 p=15672 u=victoria n=ansible | PLAY RECAP ********************************************************************************************
+2024-11-17 22:58:29,654 p=15672 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:58:29,654 p=15672 u=victoria n=ansible | localhost                  : ok=6    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:59:24,290 p=15948 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-17 22:59:24,443 p=15948 u=victoria n=ansible | PLAY [all] ********************************************************************************************
+2024-11-17 22:59:24,455 p=15948 u=victoria n=ansible | TASK [Gathering Facts] ********************************************************************************
+2024-11-17 22:59:24,578 p=15948 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 22:59:25,579 p=15948 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:59:25,596 p=15948 u=victoria n=ansible | TASK [include_role : 2do_parcial] *********************************************************************
+2024-11-17 22:59:25,636 p=15948 u=victoria n=ansible | TASK [2do_parcial : debug] ****************************************************************************
+2024-11-17 22:59:25,650 p=15948 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 22:59:25,661 p=15948 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:59:26,014 p=15948 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:59:26,026 p=15948 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *************************************************************
+2024-11-17 22:59:26,241 p=15948 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:59:26,251 p=15948 u=victoria n=ansible | TASK [2do_parcial : Crear archivo con templae] ********************************************************
+2024-11-17 22:59:27,121 p=15948 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:59:27,132 p=15948 u=victoria n=ansible | TASK [2do_parcial : Copiar archivo a una carpeta específica usando template] **************************
+2024-11-17 22:59:27,716 p=15948 u=victoria n=ansible | ok: [localhost]
+2024-11-17 22:59:27,753 p=15948 u=victoria n=ansible | TASK [2do_parcial : modificar archivo de sudoers para el grupo 2PSupervisores] ************************
+2024-11-17 22:59:28,353 p=15948 u=victoria n=ansible | changed: [localhost]
+2024-11-17 22:59:28,363 p=15948 u=victoria n=ansible | TASK [Otra tarea] *************************************************************************************
+2024-11-17 22:59:28,376 p=15948 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-17 22:59:28,396 p=15948 u=victoria n=ansible | PLAY RECAP ********************************************************************************************
+2024-11-17 22:59:28,396 p=15948 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 22:59:28,397 p=15948 u=victoria n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

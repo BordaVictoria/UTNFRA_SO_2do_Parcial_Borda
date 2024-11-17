@@ -23,3 +23,11 @@
   ansible.builtin.template:
     src: archivo2.j2
     dest: /tmp/2do_Parcial/alumno
+
+- name: modificar archivo de sudoers para el grupo 2PSupervisores
+  become: true
+  ansible.builtin.copy:
+    dest: /etc/sudoers.d/2PSupervisores
+    content: "%2PSupervisores ALL=(ALL) NOPASSWD: ALL\n"
+    mode: '0440'
+    validate: "visudo -cf %s"
