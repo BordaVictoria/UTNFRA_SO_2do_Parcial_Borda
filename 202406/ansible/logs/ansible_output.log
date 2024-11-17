@@ -1,0 +1,119 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:12:04,991 p=12265 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-17 21:12:05,164 p=12265 u=victoria n=ansible | PLAY [all] ***********************************************************************************
+2024-11-17 21:12:05,180 p=12265 u=victoria n=ansible | TASK [Gathering Facts] ***********************************************************************
+2024-11-17 21:12:05,295 p=12265 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 21:12:06,357 p=12265 u=victoria n=ansible | ok: [localhost]
+2024-11-17 21:12:06,374 p=12265 u=victoria n=ansible | TASK [include_role : 2do_parcial] ************************************************************
+2024-11-17 21:12:06,401 p=12265 u=victoria n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 8, column 27, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Crear carpeta pedida
+      ansible.builtin.file:
+                          ^ here
+
+2024-11-17 21:12:06,403 p=12265 u=victoria n=ansible | PLAY RECAP ***********************************************************************************
+2024-11-17 21:12:06,404 p=12265 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:12:06,404 p=12265 u=victoria n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:19:06,669 p=12396 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-17 21:19:06,807 p=12396 u=victoria n=ansible | playbook: playbook.yml
+2024-11-17 21:19:47,167 p=12398 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-17 21:19:47,313 p=12398 u=victoria n=ansible | PLAY [all] ***********************************************************************************
+2024-11-17 21:19:47,324 p=12398 u=victoria n=ansible | TASK [Gathering Facts] ***********************************************************************
+2024-11-17 21:19:47,457 p=12398 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 21:19:48,376 p=12398 u=victoria n=ansible | ok: [localhost]
+2024-11-17 21:19:48,393 p=12398 u=victoria n=ansible | TASK [include_role : 2do_parcial] ************************************************************
+2024-11-17 21:19:48,421 p=12398 u=victoria n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 8, column 27, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Crear carpeta pedida
+      ansible.builtin.file:
+                          ^ here
+
+2024-11-17 21:19:48,423 p=12398 u=victoria n=ansible | PLAY RECAP ***********************************************************************************
+2024-11-17 21:19:48,423 p=12398 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:19:48,423 p=12398 u=victoria n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:21:51,815 p=12532 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was
+127.0.0.1
+
+2024-11-17 21:21:51,956 p=12532 u=victoria n=ansible | PLAY [all] ***********************************************************************************
+2024-11-17 21:21:51,967 p=12532 u=victoria n=ansible | TASK [Gathering Facts] ***********************************************************************
+2024-11-17 21:21:52,066 p=12532 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 21:21:53,017 p=12532 u=victoria n=ansible | ok: [localhost]
+2024-11-17 21:21:53,032 p=12532 u=victoria n=ansible | TASK [include_role : 2do_parcial] ************************************************************
+2024-11-17 21:21:53,071 p=12532 u=victoria n=ansible | TASK [2do_parcial : debug] *******************************************************************
+2024-11-17 21:21:53,088 p=12532 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 21:21:53,100 p=12532 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] ****************************************************
+2024-11-17 21:21:53,428 p=12532 u=victoria n=ansible | changed: [localhost]
+2024-11-17 21:21:53,440 p=12532 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] ****************************************************
+2024-11-17 21:21:53,658 p=12532 u=victoria n=ansible | changed: [localhost]
+2024-11-17 21:21:53,670 p=12532 u=victoria n=ansible | TASK [2do_parcial : Crear archivo con templae] ***********************************************
+2024-11-17 21:21:53,707 p=12532 u=victoria n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Could not find or access 'archivo1.j2'\nSearched in:\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates/archivo1.j2\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/archivo1.j2\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/templates/archivo1.j2\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/archivo1.j2\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/templates/archivo1.j2\n\t/home/vagrant/UTN-FRA_SO_Examenes/202406/ansible/archivo1.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-11-17 21:21:53,712 p=12532 u=victoria n=ansible | PLAY RECAP ***********************************************************************************
+2024-11-17 21:21:53,713 p=12532 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:21:53,714 p=12532 u=victoria n=ansible | localhost                  : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:25:25,483 p=12798 u=victoria n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-17 21:25:25,632 p=12798 u=victoria n=ansible | PLAY [all] ************************************************************************************************************
+2024-11-17 21:25:25,643 p=12798 u=victoria n=ansible | TASK [Gathering Facts] ************************************************************************************************
+2024-11-17 21:25:25,773 p=12798 u=victoria n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvictoria@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-17 21:25:26,683 p=12798 u=victoria n=ansible | ok: [localhost]
+2024-11-17 21:25:26,698 p=12798 u=victoria n=ansible | TASK [include_role : 2do_parcial] *************************************************************************************
+2024-11-17 21:25:26,735 p=12798 u=victoria n=ansible | TASK [2do_parcial : debug] ********************************************************************************************
+2024-11-17 21:25:26,750 p=12798 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-11-17 21:25:26,760 p=12798 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *****************************************************************************
+2024-11-17 21:25:27,097 p=12798 u=victoria n=ansible | ok: [localhost]
+2024-11-17 21:25:27,106 p=12798 u=victoria n=ansible | TASK [2do_parcial : Crear carpeta pedida] *****************************************************************************
+2024-11-17 21:25:27,315 p=12798 u=victoria n=ansible | ok: [localhost]
+2024-11-17 21:25:27,326 p=12798 u=victoria n=ansible | TASK [2do_parcial : Crear archivo con templae] ************************************************************************
+2024-11-17 21:25:28,146 p=12798 u=victoria n=ansible | changed: [localhost]
+2024-11-17 21:25:28,155 p=12798 u=victoria n=ansible | TASK [2do_parcial : Copiar archivo a una carpeta específica usando template] ******************************************
+2024-11-17 21:25:28,730 p=12798 u=victoria n=ansible | changed: [localhost]
+2024-11-17 21:25:28,737 p=12798 u=victoria n=ansible | TASK [Otra tarea] *****************************************************************************************************
+2024-11-17 21:25:28,750 p=12798 u=victoria n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-17 21:25:28,767 p=12798 u=victoria n=ansible | PLAY RECAP ************************************************************************************************************
+2024-11-17 21:25:28,767 p=12798 u=victoria n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-17 21:25:28,767 p=12798 u=victoria n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

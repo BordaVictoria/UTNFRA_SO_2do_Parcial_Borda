@@ -1,0 +1,25 @@
+---
+# tasks file for 2do_parcial
+
+- debug:
+    msg: "Tareas del 2do Parcial"
+
+- name: Crear carpeta pedida
+  ansible.builtin.file:
+    path: /tmp/2do_Parcial/alumno
+    state: directory
+
+- name: Crear carpeta pedida
+  ansible.builtin.file:
+    path: /tmp/2do_Parcial/equipo
+    state: directory
+
+- name: Crear archivo con templae
+  ansible.builtin.template:
+    src: archivo1.j2
+    dest: /tmp/2do_Parcial/equipo
+
+- name: Copiar archivo a una carpeta específica usando template
+  ansible.builtin.template:
+    src: archivo2.j2
+    dest: /tmp/2do_Parcial/alumno
